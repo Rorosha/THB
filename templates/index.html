@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    	<div class="container">
+    	
+    		<div class="hero-unit">
+        		<h1>Beer ratings done right.</h1>
+        		<p>Beer ratings are finicky things. There is a milieu of places online to find beer reviews - but the real question is this: Why do you care what they think?
+        			You don't. You really only want to know what your friends think about a beer. A good review on a site doesn't always translate to a tasty beverage.
+        			This is where the Hopbine comes in.</p>
+        		<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      		</div>
+    		
+    		<div class="row">
+  			<div class="span4">
+          			<h2>Beer of the Day</h2>
+           				<p>{{ beers.name }} </p>
+					<p>{{ beers.brewery.name }}, {{beers.brewery.location }}</p>
+					<p>{{ beers.genre.name }}</p>
+					<p>{{ beers.abv }}</p>
+          				<p><a class="btn" href="#">View details &raquo;</a></p>
+        		</div>
+        
+        		<div class="span4">
+          			<h2>News</h2>
+           			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          			<p><a class="btn" href="#">View details &raquo;</a></p>
+       			</div>
+        
+        		<div class="span4">
+          			<h2>Stats</h2>
+          			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          			<p><a class="btn" href="#">View details &raquo;</a></p>
+        		</div>
+        	
+        </div>
+
+{% endblock %}

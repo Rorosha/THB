@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">	
+    <div class="hero-unit">
+
+      <h1>Add a Beer</h1>
+      {% if error %}<p><strong>Error: </strong>{{ error }}</p>{% endif %}
+      <form action="{{ url_for('add_rating') }}" method=post>
+        <dl>
+          <dt>Beer:
+          <dd><input type=text name=beer>
+          <dt>Score:
+          <dd><input type=text name=score>
+          <dt>Scale:
+          <dd><input type=text name=scale>
+          <dt>Notes:
+          <dd><input type=text name=notes>
+          <dt>Session Beer?
+          <dd><input type=checkbox name=session>
+          <dd><input class="btn btn-primary btn-large" type=submit value="Add Rating">
+        <dl>
+      </form>
+    </div>
+
+  <div class="row">
+
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">	
+    <div class="hero-unit">
+
+      <h1>Add a Beer</h1>
+      {% if error %}<p><strong>Error: </strong>{{ error }}</p>{% endif %}
+      <form action="{{ url_for('add_beer') }}" method=post>
+        <dl>
+          <dt>Brewery:
+          <dd><input type=text name=brewery>
+          <dt>Name:
+          <dd><input type=text name=name>
+          <dt>ABV:
+          <dd><input type=text name=abv>
+          <dt>Photo:
+          <dd><input type=text name=photo>
+          <dt>Special Ingredient:
+          <dd><input type=text name=special>
+          <dt>Genre:
+          <dd><input type=text name=genre>
+          <dd><input class="btn btn-primary btn-large" type=submit value="Add Beer">
+        <dl>
+      </form>
+    </div>
+
+  <div class="row">
+
+  </div>
+
+
+{% endblock %}
